@@ -6,11 +6,11 @@ on:
       - main
 
 env:
-  ACR_NAME: myContainerRegistry
-  ACR_LOGIN_SERVER: myContainerRegistry.azurecr.io
+  ACR_NAME: maincontainer
+  ACR_LOGIN_SERVER: maincontainer.azurecr.io
   IMAGE_NAME: portfoliowebsite
-  RESOURCE_GROUP: myResourceGroup
-  CONTAINER_INSTANCE: mycontainer
+  RESOURCE_GROUP: portfoliowebsite
+  CONTAINER_INSTANCE: maincontainer
 
 jobs:
   build-and-push:
@@ -58,7 +58,7 @@ jobs:
           --registry-login-server ${{ env.ACR_LOGIN_SERVER }} \
           --registry-username ${{ secrets.ACR_USERNAME }} \
           --registry-password ${{ secrets.ACR_PASSWORD }} \
-          --dns-name-label myflaskapp \
+          --dns-name-label dangocan \
           --ports 80 \
         || az container update \
           --resource-group ${{ env.RESOURCE_GROUP }} \

@@ -59,7 +59,7 @@ jobs:
           --registry-username ${{ secrets.ACR_USERNAME }} \
           --registry-password ${{ secrets.ACR_PASSWORD }} \
           --dns-name-label dangocan \
-          --ports 80 \
+          --ports 5000 \
         || az container update \
           --resource-group ${{ env.RESOURCE_GROUP }} \
           --name ${{ env.CONTAINER_INSTANCE }} \

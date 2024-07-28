@@ -1,4 +1,4 @@
-name: CI/CD to Google Cloud
+name: Google Cloud Pipeline
 
 on:
   push:

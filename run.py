@@ -13,11 +13,13 @@ if service_account_info is None:
 credentials_dict = json.loads(service_account_info)
 
 # Write the credentials to a file
-with open('credentials/google.json', 'w') as f:
+with open('google.json', 'w') as f:
     json.dump(credentials_dict, f)
 
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'credentials/google.json'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'google.json'
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

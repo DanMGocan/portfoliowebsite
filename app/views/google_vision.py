@@ -38,4 +38,4 @@ print_labels(response)
 
 @google_vision_bp.route('/google_vision')
 def google_vision():
-    render_template('google.html', labels=response)
+    return render_template('google.html', labels=response)

@@ -1,13 +1,21 @@
-<a href="/">Home</a>
-
-<h1 class=""><strong>Labels for the image</strong></h1>
-
-<table class="">
-
-    <tbody>
-        {% for element in labels.label_annotations %}
-            <td>{{ element }}</td>
-        {% endfor %}
-    </tbody>
-
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Analysis</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1><strong>Labels for the image</strong></h1>
+    <table>
+        <tbody>
+            {% for label in labels %}
+            <tr>
+                <td>{{ label.description }}</td>
+                <td>{{ label.score }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
